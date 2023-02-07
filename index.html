@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone@7.19.1/babel.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<header>
+    <nav></nav>
+</header>
+<body>
+    <div id="root">
+        <!-- <h1>Hello!</h1> -->
+        <ul>
+            <li>red</li>
+            <li>blue</li>
+            <li>green</li>
+          </ul>
+    </div>
+</body>
+<footer></footer>
+<script type="text/babel">
+    const root = ReactDOM.createRoot(document.getElementById("root"));
+    const greeting = "Hello World";
+    root.render(<h1>{greeting}</h1>,);
+    root.render(<nav>hi</nav>,);
+    // root.render(<h1>greeting</h1>,);
+</script> 
+<!-- <script src="./index.js"></script> -->
+</html>
+
+<!-- 
+Create a static site using React, JSX, and components.
+React 18.x and JSX should be used to create the static site. 
+The static site should contain at least 5 React components.
+The static site should include a navigation bar, a list with at least 5 items, and a footer.
+The static site should responsive and optimized to work on multiple screens sizes.
+The use of CSS frameworks and libraries is allowed.  
+-->
