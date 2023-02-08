@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>gameing taskmanager</title>
     <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
     <script src="https://unpkg.com/@babel/standalone@7.19.1/babel.min.js"></script>
@@ -26,9 +26,87 @@
 <footer></footer>
 <script type="text/babel">
     const root = ReactDOM.createRoot(document.getElementById("root"));
-    const greeting = "Hello World";
-    root.render(<h1>{greeting}</h1>,);
-    root.render(<nav>hi</nav>,);
+    const HeaderInfo = () => {
+    return (
+        <header>
+            <h1>taskmanager for Games</h1>
+            <nav>
+                <h2>links to games</h2>
+                <ul>
+                    <li><a>this is a nav list</a></li>
+                    </ul>
+                </nav>
+            </header>
+    )
+    }
+
+    const FantasyTasks = () => {
+    return (
+        <div className = "fantasy-container">
+            <h2 className = "fantasy-title">Final Fantasy 14 to do list </h2>
+            <img src="images/fantasy-banner.png" alt="ocean picture" className="fantasy-pic"></img>
+            <ul>
+                <li className ="fantasy-items">Complete post stromblood quests</li>
+                <li className ="fantasy-items">Complete PVP reward tier</li>
+                <li className ="fantasy-items">Complete island sanctuary </li>
+                <li className ="fantasy-items">Complete seasonal quests </li>
+                <li className ="fantasy-items">Complete weekly objectives</li>
+                </ul>
+            </div>
+    )
+    }
+
+    const TerrariaTasks = () => {
+    return (
+        <div className = "terra-container">
+            <h2 className = "terra-title">Terraria to do list </h2>
+            <img src="images/terraria-pic.png" alt="ocean picture" className="terra-pic"></img>
+            <ul>
+                <li className ="terra-items">Complete fishing quests</li>
+                <li className ="terra-items">Get a pocket mirror</li>
+                <li className ="terra-items">Defeat the empress of light</li>
+                <li className ="terra-items">Restock potions</li>
+                </ul>
+            </div>
+    )
+    }
+
+    const FactoryTasks = () => {
+    return (
+        <div className = "factory-container">
+            <h2 className = "factory-title">Satisfactory to do list</h2>
+            <img src="images/factory-pic.jpg" alt="ocean picture" className="factory-pic"></img>
+            <ul>
+                <li className ="factory-items">Rework power supply</li>
+                <li className ="factory-items">Add more coal generators</li>
+                <li className ="factory-items">Renovate factory</li>
+                </ul>
+            </div>
+    )
+    }
+
+    const FooterInfo = () => {
+    return (
+        <div>
+            <footer>this is my footer!</footer>
+            </div>
+    )
+    }
+
+    const App = () => {return (<div className ="main">
+        <HeaderInfo/>
+        <FantasyTasks/>
+        <TerrariaTasks/>
+        <FactoryTasks/>
+        <FooterInfo/>
+        </div>)
+    }
+
+        root.render(<App/>)
+    
+    // const greeting = "Hello World";
+    // root.render(<h1>{greeting}</h1>,);
+    // root.render(<nav>hi</nav>,);
     // root.render(<h1>greeting</h1>,);
 </script> 
 <!-- <script src="./index.js"></script> -->

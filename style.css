@@ -1,3 +1,253 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/*End of CSS reset*/
+.main{
+    background-color: #f5eccd;
+}
+
+
 h1 {
     color: aqua;
+}
+
+/* all componet styles */
+/* li {
+    font-size: 20px;
+    padding: .5rem;
+} */
+
+/* fantasy component */
+.fantasy-container{
+    position: relative;
+    max-width: 35rem;
+    background-color: #fcc8c2;
+    padding: 1rem;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+}
+
+.fantasy-title{
+    position: absolute;
+    text-align: center;
+    right: 30%;
+    top: 30%;
+    color:white;
+    font-size: x-large;
+    background-color: black;
+    padding: 1rem;
+}
+
+.fantasy-pic{
+    max-width: 35rem;
+}
+
+.fantasy-items{
+    font-size: 20px;
+    padding: .5rem;
+    margin-top:.5rem;
+    margin-bottom: .5rem;
+    border: 1px solid #1B065E;
+    background-color:#FF87AB;
+}
+
+/* terra component */
+.terra-container{
+    position: relative;
+    max-width: 35rem;
+    background-color:#67697C;
+    padding: 1rem;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+}
+
+.terra-title{
+    position: absolute;
+    text-align: center;
+    right: 35%;
+    top: 30%;
+    color:white;
+    font-size: x-large;
+    background-color: black;
+    padding: 1rem;
+}
+
+.terra-pic{
+    max-width: 35rem;
+}
+
+.terra-items{
+    font-size: 20px;
+    padding: .5rem;
+    margin-top:.5rem;
+    margin-bottom: .5rem;
+    border: 1px solid #253D5B;
+    background-color:#C6878F;
+}
+
+/* factory component */
+.factory-container{
+    position: relative;
+    max-width: 35rem;
+    background-color:#F08700;
+    padding: 1rem;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+}
+
+.factory-title{
+    position: absolute;
+    text-align: center;
+    right: 30%;
+    top: 30%;
+    color:white;
+    font-size: x-large;
+    background-color: black;
+    padding: 1rem;
+}
+
+.factory-pic{
+    width: 35rem;
+}
+
+.factory-items{
+    font-size: 20px;
+    padding: .5rem;
+    margin-top:.5rem;
+    margin-bottom: .5rem;
+    border: 1px solid #2C0E37;
+    background-color:#00A6A6;
 }
