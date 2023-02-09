@@ -29,11 +29,13 @@
     const HeaderInfo = () => {
     return (
         <header>
-            <h1>taskmanager for Games</h1>
+            <h1 className = "site-title">Taskmanager for Games</h1>
             <nav>
-                <h2>links to games</h2>
-                <ul>
-                    <li><a>this is a nav list</a></li>
+                <h2 className = "nav-title">Links to game resources</h2>
+                <ul className = "nav-list">
+                    <li><a href="https://ffxiv.consolegameswiki.com/wiki/FF14_Wiki" target= "__blank" className = "wiki-site">FF14 wiki</a></li>
+                    <li><a href="https://terraria.fandom.com/wiki/Terraria_Wiki" target= "__blank" className = "wiki-site">Terraria wiki</a></li>
+                    <li><a href="https://satisfactory.fandom.com/wiki/Satisfactory_Wiki" target= "__blank" className = "wiki-site">Satisfactory wiki</a></li>
                     </ul>
                 </nav>
             </header>
@@ -88,16 +90,18 @@
     const FooterInfo = () => {
     return (
         <div>
-            <footer>this is my footer!</footer>
+            <footer> &copy; Copyright, Caitlin Dawson 2023</footer>
             </div>
     )
     }
 
     const App = () => {return (<div className ="main">
         <HeaderInfo/>
+        <div className ="cards">
         <FantasyTasks/>
         <TerrariaTasks/>
         <FactoryTasks/>
+        </div>
         <FooterInfo/>
         </div>)
     }

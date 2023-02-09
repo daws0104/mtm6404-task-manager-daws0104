@@ -140,24 +140,47 @@ table {
 }
 
 
-h1 {
-    color: aqua;
-}
 
 /* all componet styles */
-/* li {
+
+header{
+    background-color: #8DA7BE;
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+.site-title{
+    font-size: 50px;
+    font-style: bold;
+    padding: 1rem;
+}
+
+.nav-title{
+    font-size: 30px;
+    padding-bottom: 1rem;
+
+}
+
+.wiki-site{
+    text-decoration: none;
+    color: black;
     font-size: 20px;
-    padding: .5rem;
-} */
+    /* background-color: #E49AB0;
+    border: 1px solid #750D37; */
+    /* padding: 1rem;
+    margin: 1rem; */
+} 
 
 /* fantasy component */
 .fantasy-container{
     position: relative;
     max-width: 35rem;
+    border-radius: 2rem;
     background-color: #fcc8c2;
     padding: 1rem;
     margin-left: 1rem;
     margin-bottom: 1rem;
+    margin-top: 1rem;
 }
 
 .fantasy-title{
@@ -166,12 +189,15 @@ h1 {
     right: 30%;
     top: 30%;
     color:white;
+    border-radius: 5rem;
     font-size: x-large;
     background-color: black;
     padding: 1rem;
 }
 
 .fantasy-pic{
+    border-radius: 2rem;
+    border: 1px solid #1B065E;
     max-width: 35rem;
 }
 
@@ -180,6 +206,7 @@ h1 {
     padding: .5rem;
     margin-top:.5rem;
     margin-bottom: .5rem;
+    border-radius: 5rem;
     border: 1px solid #1B065E;
     background-color:#FF87AB;
 }
@@ -188,6 +215,7 @@ h1 {
 .terra-container{
     position: relative;
     max-width: 35rem;
+    border-radius: 2rem;
     background-color:#67697C;
     padding: 1rem;
     margin-left: 1rem;
@@ -200,12 +228,15 @@ h1 {
     right: 35%;
     top: 30%;
     color:white;
+    border-radius: 5rem;
     font-size: x-large;
     background-color: black;
     padding: 1rem;
 }
 
 .terra-pic{
+    border-radius: 2rem;
+    border: 1px solid #253D5B;
     max-width: 35rem;
 }
 
@@ -214,6 +245,7 @@ h1 {
     padding: .5rem;
     margin-top:.5rem;
     margin-bottom: .5rem;
+    border-radius: 5rem;
     border: 1px solid #253D5B;
     background-color:#C6878F;
 }
@@ -222,6 +254,7 @@ h1 {
 .factory-container{
     position: relative;
     max-width: 35rem;
+    border-radius: 2rem;
     background-color:#F08700;
     padding: 1rem;
     margin-left: 1rem;
@@ -235,11 +268,14 @@ h1 {
     top: 30%;
     color:white;
     font-size: x-large;
+    border-radius: 5rem;
     background-color: black;
     padding: 1rem;
 }
 
 .factory-pic{
+    border-radius: 2rem;
+    border: 1px solid #2C0E37;
     width: 35rem;
 }
 
@@ -248,6 +284,40 @@ h1 {
     padding: .5rem;
     margin-top:.5rem;
     margin-bottom: .5rem;
+    border-radius: 5rem;
     border: 1px solid #2C0E37;
     background-color:#00A6A6;
+}
+
+footer{
+    font-size: 15px;
+    padding: 1rem;
+    background-color: #8DA7BE;
+}
+
+/*-----------------
+   Desktop styles
+------------------*/
+@media screen and (min-width:900px){
+.cards{
+    display: flex;
+}
+
+.terra-container{
+    margin-top: 1rem;
+}
+
+.factory-container{
+    margin-top: 1rem;
+}
+
+/* .nav-list{
+    display: flex;
+    margin-right: 50rem;
+} */
+
+.wiki-site{
+    margin-left: 1rem;
+}
+
 }
