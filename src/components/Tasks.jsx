@@ -7,8 +7,6 @@ import ListGroup from './ListGroup'
 import listdata from '../../listdata';
 
 function Tasks(props) {
-    //array here? or load data as a string here
-    // console.tasks(props)
     return (
         // <script type = "module">
         <div className="task-area">
