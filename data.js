@@ -1,6 +1,6 @@
 
 
-export const data = [{
+export default [{
     title: "Final Fantasy 14 to do list",
     image: "images/fantasy-banner.png"
 },

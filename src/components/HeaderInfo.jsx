@@ -1,17 +1,21 @@
 import React from 'react';
 
-const Greeting = () => {
-    return (
-        <h3>Good</h3>
-    )
+class Greeting extends React.Component{
+    render() {
+        <h3>eee</h3>
+    }
 }
 
+
+
+
+
 const HeaderInfo = () => {
-    // const date = new Date();
-    // const hour = date.getHours();
+    //  const date = new Date();
+    //  const hour = date.getHours();
     return (
         <header>
-            {/* <h3>Good</h3> {hour>=12 ? hour=16 ? } */}
+             {/* <h3>Good</h3> {hour>=12 ? hour=16 ? }  */}
             <h1 className = "module">Taskmanager for Games</h1>
             <nav>
                 <h2 className = "nav-title">Links to game resources</h2>

@@ -4,6 +4,7 @@ import './App.css'
 import FooterInfo from './components/FooterInfo'
 import HeaderInfo from './components/HeaderInfo'
 import Tasks from './components/Tasks'
+import Greeting from './components/Greeting'
 
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
 
   return (
     <div className="App">
+      <Greeting />
       <HeaderInfo />
       {/* <App /> */}
       <Tasks />
