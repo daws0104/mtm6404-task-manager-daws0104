@@ -14,14 +14,15 @@ function Tasks(props) {
             <><h2 className="fantasy-title">{data[0].title}</h2>
                 <img src={data[0].image} alt="Final fantasy 14 banner" className="fantasy-pic"></img>
                 <ListGroup>
-                    {listdata.map(listitem => <li className="fantasy-items" key={listitem.id}>{listitem.title}</li>)}
+                    {props.allListItems.map(listitem => <li className="fantasy-items" key={listitem.id}>{listitem.pri} {listitem.title} {listitem.status} <br></br>X</li>)}
                     {/* <li className="fantasy-items">Complete post stromblood quests</li>
                     <li className="fantasy-items">Complete PVP reward tier</li>
                     <li className="fantasy-items">Complete island sanctuary </li>
                     <li className="fantasy-items">Complete seasonal quests </li>
                     <li className="fantasy-items">Complete weekly objectives</li> */}
                 </ListGroup></>
-        </div><div className="terra-container">
+        </div>
+        {/* <div className="terra-container">
                 <h2 className="terra-title">{data[1].title}</h2>
                 <img src={data[1].image} alt="Terraria banner" className="terra-pic"></img>
                 <ul>
@@ -30,7 +31,8 @@ function Tasks(props) {
                     <li className="terra-items">Defeat the empress of light</li>
                     <li className="terra-items">Restock potions</li>
                 </ul>
-            </div><div className="factory-container">
+            </div> */}
+            {/* <div className="factory-container">
                 <h2 className="factory-title">{data[2].title}</h2>
                 <img src={data[2].image} alt="Satisfactory banner" className="factory-pic"></img>
                 <ul>
@@ -38,9 +40,8 @@ function Tasks(props) {
                     <li className="factory-items">Add more coal generators</li>
                     <li className="factory-items">Renovate factory</li>
                 </ul>
+            </div> */}
             </div>
-            </div>
-            // </script>
     )  
 }
 

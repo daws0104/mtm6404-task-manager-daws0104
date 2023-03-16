@@ -193,8 +193,8 @@ header{
 .fantasy-title{
     position: absolute;
     text-align: center;
-    right: 30%;
-    top: 30%;
+    right: 20%;
+    top: 20%;
     color:white;
     border-radius: 5rem;
     font-size: x-large;
@@ -205,7 +205,7 @@ header{
 .fantasy-pic{
     border-radius: 2rem;
     border: 1px solid #1B065E;
-    max-width: 35rem;
+    max-width: 30rem;
 }
 
 .fantasy-items{
@@ -283,7 +283,7 @@ header{
 .factory-pic{
     border-radius: 2rem;
     border: 1px solid #2C0E37;
-    width: 35rem;
+    max-width: 30rem;
 }
 
 .factory-items{
@@ -294,7 +294,43 @@ header{
     border-radius: 5rem;
     border: 1px solid #2C0E37;
     background-color:#00A6A6;
+
 }
+
+/*form styles*/
+.task-form {
+    font-size: 20px;
+    background-color: #99D17B;
+    margin-bottom: 1rem;
+    border-radius: 2rem;
+    padding: 1rem;
+
+}
+
+.dropdowns{
+    display: flex;
+    margin-left: 4rem;
+}
+
+#pri{
+    margin-right: .5rem;
+    margin-left: .5rem;
+    color: black;
+
+}
+
+#status{
+    margin-left: .5rem;
+    margin-right: .5rem;
+    color: black;
+}
+
+#enter {
+    background-color: #DB2763;
+    border: solid #DB2763;
+}
+
+
 
 footer{
     font-size: 15px;
