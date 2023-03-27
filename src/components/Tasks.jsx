@@ -9,7 +9,7 @@ import listdata from '../../listdata';
 function Tasks(props) {
 
     const [showCompleted, setShowCompleted] = useState(true)
-
+//changes item to completed
     function completedHandler () {
         if (showCompleted === false) {
             setShowCompleted(true)  
