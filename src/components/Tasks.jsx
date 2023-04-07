@@ -5,6 +5,7 @@ import React, { useState } from "react";
 import data from '../../data';
 import ListGroup from './ListGroup'
 import listdata from '../../listdata';
+import { Link } from "react-router-dom";
 
 function Tasks(props) {
 
@@ -40,7 +41,14 @@ function Tasks(props) {
 
     return (
         // <script type = "module">
-        <div className="task-area">
+        <div>
+            <div className="link-nav">
+            <h2 className="list-header">Lists</h2>
+            <Link to='/' className="home-link">Home</Link>
+            <Link to='/Aria' className="aria-link">Aria Tasks</Link>
+            <Link to="/opal" className="opal-link">Opal Tasks</Link>
+            </div>
+            <div className="task-area">
             <div className="fantasy-container">
                 <>
                     <h2 className="fantasy-title">{data[0].title}</h2>
@@ -87,7 +95,9 @@ function Tasks(props) {
 
                     </ListGroup>
                 </>
+               
             </div>
+        </div>
         </div>
     )  
 }

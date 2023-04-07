@@ -1,18 +1,28 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
 import FooterInfo from './components/FooterInfo'
 import HeaderInfo from './components/HeaderInfo'
 import Tasks from './components/Tasks'
 import Greeting from './components/Greeting'
-import Form from './components/Form'
+import Form from './components/form'
 import listdata from '../listdata';
+import { Link } from 'react-router-dom'
+import { ListItemsContext } from './context/ListItemsContext'
 
 
 function App() {
-  const [count, setCount] = useState(0)
-  const [allListItems, setAllListItems] = React.useState(JSON.parse(localStorage.getItem('list')) || listdata)
-  const [listItemId, setListItemId] = React.useState()
+  const useListItemsContext = useContext(ListItemsContext)
+
+  const [allListItems, setAllListItems] = useState(listdata)
+  const [listItemId, setListItemId] = useState()
+
+  const contextValues = {
+    allListItems,
+    setAllListItems
+  }
+
+  // (JSON.parse(localStorage.getItem('list')) || 
 
   // const sortedList = allListItems.sort((a,b) => {
   //   if (a.pri === 'high') {
@@ -69,18 +79,20 @@ function App() {
   // listitem.id stueas //to override
 
   return (
-    <div className="App">
-      <Greeting />
-      <HeaderInfo />
-      <Tasks
-        sortedList={allListItems}
-        editListItem={(id) => setListItemId(id)}
-        listStatusHandler={statusHandler}
-        listDeleteHandler={deleteHandler}
-      />
-      <Form allListItems={allListItems} setAllListItems={setAllListItems} />
-      <FooterInfo />
-    </div>
+    <ListItemsContext.Provider value={contextValues}>
+      <div className="App">
+        <Greeting />
+        <HeaderInfo />
+        <Tasks
+          sortedList={allListItems}
+          editListItem={(id) => setListItemId(id)}
+          listStatusHandler={statusHandler}
+          listDeleteHandler={deleteHandler}
+        />
+        <Form allListItems={allListItems} setAllListItems={setAllListItems} />
+        <FooterInfo />
+      </div>
+    </ListItemsContext.Provider>
   );
 }
 

@@ -176,7 +176,26 @@ header{
     border: 1px solid #750D37; */
     /* padding: 1rem;
     margin: 1rem; */
-} 
+}
+
+
+/*router links*/
+.list-header{
+    padding-bottom: .5rem;
+    font-size: larger;
+    font-weight: bold;
+}
+
+.link-nav{
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    background-color:#99D17B;
+}
+
+
+
+
 
 /* fantasy component */
 .fantasy-container{
