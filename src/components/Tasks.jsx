@@ -10,6 +10,20 @@ import { Link } from "react-router-dom";
 function Tasks(props) {
 
     const [showCompleted, setShowCompleted] = useState(true)
+
+    const lists = [
+        {
+          id: 0,
+          slug: '/lists/opal',
+          name: 'opal'
+        },
+        {
+          id: 1,
+          slug: '/lists/aria',
+          name: 'aria'
+        }
+      ]
+    
 //changes item to completed
     function completedHandler () {
         if (showCompleted === false) {
@@ -23,19 +37,19 @@ function Tasks(props) {
 
     // function createItem() {
     //     localStorage.setItem('title')
-    //     localStorage.setItem('pri')
+    //     localStorage.setItem('priority')
     //     localStorage.setItem('status')
     //   }
 
     //   function retriveItem() {
     //     localStorage.getItem('title')
-    //     localStorage.getItem('pri')
+    //     localStorage.getItem('priority')
     //     localStorage.getItem('status')
     //   }
 
     //   function remove() {
     //     localStorage.removeItem('title')
-    //     localStorage.removeItem('pri')
+    //     localStorage.removeItem('priority')
     //     localStorage.removeItem('status')
     //   }
 
@@ -43,10 +57,11 @@ function Tasks(props) {
         // <script type = "module">
         <div>
             <div className="link-nav">
-            <h2 className="list-header">Lists</h2>
-            <Link to='/' className="home-link">Home</Link>
-            <Link to='/Aria' className="aria-link">Aria Tasks</Link>
-            <Link to="/opal" className="opal-link">Opal Tasks</Link>
+                <h2 className="list-header">Lists</h2>
+                <Link to='/' className="home-link">Home</Link>
+                {
+                    lists.map((list, index) => <Link to={list.slug} className="aria-link" key={index}>{list.name} tasks</Link>)
+                }
             </div>
             <div className="task-area">
             <div className="fantasy-container">
@@ -57,11 +72,11 @@ function Tasks(props) {
                     <ListGroup>
                         {props.sortedList.map(listitem => {
                             if (showCompleted === true) {
-                                    if (listitem.status === 'incomplete') {
+                                    if (listitem.status === false) {
                                         return (
                                             <li
                                                 className="fantasy-items"
-                                                key={listitem.id}> {listitem.pri}~{listitem.title}~{listitem.status}
+                                                key={listitem.id}> {listitem.priority}~{listitem.title}~{listitem.status}
                                                 <br></br>
                                                 <button onClick={props.listStatusHandler} id={listitem.id} className="complete-button" >Mark as completed</button>
                                                 <button className="remove-button" onClick={props.listDeleteHandler} id={listitem.id}>Remove task</button>
@@ -71,18 +86,18 @@ function Tasks(props) {
                                         return (
                                             <li
                                                 className="fantasy-items"
-                                                key={listitem.id}> {listitem.pri}~{listitem.title}~{listitem.status}
+                                                key={listitem.id}> {listitem.priority}~{listitem.title}~{listitem.status}
                                                 <br></br>
                                                 <button className="remove-button" onClick={props.listDeleteHandler} id={listitem.id}>Remove task</button>
                                             </li>
                                         )
                                     }
                             } else {
-                                if (listitem.status === 'incomplete') {
+                                if (listitem.status === false) {
                                     return (
                                         <li
                                             className="fantasy-items"
-                                            key={listitem.id}>{listitem.pri} {listitem.title} {listitem.status}
+                                            key={listitem.id}>{listitem.priority} {listitem.title} {listitem.status}
                                             <br></br>
                                             <button onClick={props.listStatusHandler} id={listitem.id} className="complete-button">Mark as completed</button>
                                             <button className="remove-button" onClick={props.listDeleteHandler} id={listitem.id}>Remove task</button>

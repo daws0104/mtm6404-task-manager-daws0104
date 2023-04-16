@@ -5,6 +5,7 @@ import './index.css'
 import CharacterBio from './components/CharacterBio';
 import Opal from './routes/Opal'
 import Aria from './routes/Aria'
+import Lists from './routes/Lists'
 import {createBrowserRouter,Router,RouterProvider} from "react-router-dom";
 // import data from 'data.js'
 
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
   {
     path:"/CharacterBio/:id",
     element: <CharacterBio />
+  },
+  {
+    path: '/lists/:id',
+    element: <Lists />
   },
   {
     path: "/opal",

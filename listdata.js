@@ -1,36 +1,36 @@
 export default [{
     id: 0,
     title: 'Complete post stromblood quests',
-    pri: 'high',
-    status: 'complete',
+    priority: 'high',
+    status: true,
     char: 'Opal'
 },
 {
     id: 1,
     title: 'Complete PVP reward tier',
-    pri: 'high',
-    status: 'complete',
+    priority: 'high',
+    status: true,
     char: 'Opal'
 },
 {
     id: 2,
     title: 'Complete island sanctuary',
-    pri: 'low',
-    status: 'incomplete',
+    priority: 'low',
+    status: false,
     char: 'Aria'
 },
 {
     id: 3,
     title: 'Complete seasonal quests',
-    pri: 'high',
-    status: 'complete',
+    priority: 'high',
+    status: false,
     char: 'Aria'
 },
 {
     id: 4,
     title: 'Complete weekly objectives',
-    pri: 'low',
-    status: 'incomplete',
+    priority: 'low',
+    status: false,
     char: 'Opal'
 },
 
